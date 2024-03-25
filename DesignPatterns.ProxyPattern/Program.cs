@@ -3,7 +3,8 @@
 
 ILogger logger = new BufferedFileLoggerProxy(5);
 logger.Log("Hello world");
-
+Console.WriteLine(Thread.CurrentThread.Name);
+Console.ReadLine();
 class BufferedFileLoggerProxy : ILogger
 {
     private readonly int bufferSize;
@@ -30,6 +31,7 @@ class BufferedFileLoggerProxy : ILogger
 
             fileLogger.Log(buffer);
             buffer.Clear();
+            
         }
     }
 

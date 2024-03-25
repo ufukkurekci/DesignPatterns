@@ -1,6 +1,8 @@
 ﻿
 // Strategy Design Pattern - Behavioral Category //
 
+
+
 var paymentOptions = new PaymentOptions()
 {
     CardNumber = "1234123412341234",
